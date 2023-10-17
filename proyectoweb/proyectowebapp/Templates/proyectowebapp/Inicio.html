@@ -1,0 +1,419 @@
+{% extends "proyectowebapp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+        <!-- Carousel Start -->
+        <div class="container-fluid px-0">
+            <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
+                    <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+
+                        <div style="text-align: center;">
+                            <img src="{% static 'proyectowebapp/img/carousel-1.jpeg' %}" class="img-fluid" alt="First slide">
+                        </div>
+                        
+                        <div class="carousel-caption">
+                            <div class="container carousel-content">
+                                <h6 class="text-secondary h4 animated fadeInUp">Aprende en grande</h6>
+                                <h1 class="text-white display-1 mb-4 animated fadeInRight">¡Construyamos el futuro juntos!</h1>
+                                <p class="mb-4 text-white fs-5 animated fadeInDown">Unete a nestra comunidad de aprendizaje</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div style="text-align: center;">
+                            <img src="{% static 'proyectowebapp/img/carousel-2.jpeg' %}" class="img-fluid" alt="Second slide">
+                        </div>
+                        
+                        <div class="carousel-caption">
+                            <div class="container carousel-content">
+                                <h6 class="text-secondary h4 animated fadeInUp">Enseñanza Superior de Calidad</h6>
+                                <h1 class="text-white display-1 mb-4 animated fadeInLeft">Aprende con nuestros metodos interactivos</h1>
+                                <p class="mb-4 text-white fs-5 animated fadeInDown">¡Descubre tu potencial!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <!-- Carousel End -->
+
+        <!-- About Start -->
+        <div class="container-fluid py-5 my-5">
+            <div class="container pt-5">
+                <div class="row g-5">
+                    <div class="col-lg-5 col-md-6 col-sm-12 wow fadeIn" data-wow-delay=".3s">
+                        <div class="h-100 position-relative">
+                            <img src="{% static 'img/about-1.jpg' %}" class="img-fluid w-75 rounded" alt="" style="margin-bottom: 25%;">
+                            <div class="position-absolute w-75" style="top: 25%; left: 25%;">
+                                <img src="{% static 'img/about-2.jpg'%}" class="img-fluid w-100 rounded" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-6 col-sm-12 wow fadeIn" data-wow-delay=".5s">
+                        <h5 class="text-primary">Sobre nosotros</h5>
+                        <h1 class="mb-4">Tu Puerta a un Futuro Tecnológico Brillante</h1>
+                        <p>En USAC ACADEMY, estamos dedicados a transformar tus ambiciones tecnológicas en una realidad tangible. Somos mucho más que una academia de cursos; somos tus socios en el viaje hacia el conocimiento y el éxito en el mundo de la tecnología y la programación.</p>
+                        <p class="mb-4">Consideramos tu educación como una inversión en tu futuro. Estamos comprometidos a brindarte una experiencia de aprendizaje enriquecedora que te equipará con las habilidades y el conocimiento necesarios para destacar en el competitivo mundo de la tecnología y la programación. Únete a nosotros en este emocionante viaje hacia un futuro tecnológico brillante. Juntos, alcanzaremos nuevas alturas en el mundo de la innovación y la creatividad.</p>
+                        <a href="" class="btn btn-secondary rounded-pill px-5 py-3 text-white">Mas Detalles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+
+        <!-- Services Start 
+        <div class="container-fluid services py-5 mb-5">
+            <div class="container">
+                <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
+                    <h5 class="text-primary">Nuestros Cursos</h5>
+                    <h1>Cursos y especializaciones en tecnología</h1>
+                </div>
+                <div class="row g-5 services-inner">
+                    <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".3s">
+                        <div class="services-item bg-light">
+                            <div class="p-4 text-center services-content">
+                                <div class="services-content-icon">
+                                    <i class="fa fa-code fa-7x mb-4 text-primary"></i>
+                                    <h4 class="mb-3">Python</h4>
+                                    <p class="mb-4">Aprende el lenguaje de programación Python, conocido por su simplicidad y versatilidad. Desde la creación de aplicaciones web y desarrollo de juegos hasta análisis de datos y automatización, Python es esencial en el mundo de la programación.</p>
+                                    <a href="" class="btn btn-secondary text-white px-5 py-3 rounded-pill">Asignar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".5s">
+                        <div class="services-item bg-light">
+                            <div class="p-4 text-center services-content">
+                                <div class="services-content-icon">
+                                    <i class="fa fa-file-code fa-7x mb-4 text-primary"></i>
+                                    <h4 class="mb-3">Java</h4>
+                                    <p class="mb-4">Sumérgete en el mundo de la programación orientada a objetos con Java. Este curso te enseñará a desarrollar aplicaciones robustas y escalables, desde aplicaciones móviles hasta sistemas empresariales de alto rendimiento.</p>
+                                    <a href="" class="btn btn-secondary text-white px-5 py-3 rounded-pill">Asignar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".7s">
+                        <div class="services-item bg-light">
+                            <div class="p-4 text-center services-content">
+                                <div class="services-content-icon">
+                                    <i class="fa fa-external-link-alt fa-7x mb-4 text-primary"></i>
+                                    <h4 class="mb-3">JavaScripts</h4>
+                                    <p class="mb-4">Domina el lenguaje de la web. El curso de JavaScript te permitirá crear sitios web interactivos y dinámicos. Aprenderás a manipular el DOM, gestionar eventos y desarrollar aplicaciones web modernas.</p>
+                                    <a href="" class="btn btn-secondary text-white px-5 py-3 rounded-pill">Asignar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".3s">
+                        <div class="services-item bg-light">
+                            <div class="p-4 text-center services-content">
+                                <div class="services-content-icon">
+                                    <i class="fas fa-user-secret fa-7x mb-4 text-primary"></i>
+                                    <h4 class="mb-3">C++</h4>
+                                    <p class="mb-4">Descubre el poder de la programación de bajo nivel con C++. Este curso te guiará a través de la creación de software eficiente y de alto rendimiento, utilizado en sistemas operativos, videojuegos y aplicaciones críticas.</p>
+                                    <a href="" class="btn btn-secondary text-white px-5 py-3 rounded-pill">Asignar</a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".5s">
+                        <div class="services-item bg-light">
+                            <div class="p-4 text-center services-content">
+                                <div class="services-content-icon">
+                                    <i class="fa fa-envelope-open fa-7x mb-4 text-primary"></i>
+                                    <h4 class="mb-3">Digital Marketing</h4>
+                                    <p class="mb-4">Entra en el mundo del marketing digital y aprende a promocionar negocios en línea. Explora estrategias de SEO, publicidad en redes sociales, email marketing y análisis de datos para impulsar el éxito en la era digital.</p>
+                                    <a href="" class="btn btn-secondary text-white px-5 py-3 rounded-pill">Asignar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".7s">
+                        <div class="services-item bg-light">
+                            <div class="p-4 text-center services-content">
+                                <div class="services-content-icon">
+                                    <i class="fas fa-laptop fa-7x mb-4 text-primary"></i>
+                                    <h4 class="mb-3">HTML</h4>
+                                    <p class="mb-4">Entra en el mundo del marketing digital y aprende a promocionar negocios en línea. Explora estrategias de SEO, publicidad en redes sociales, email marketing y análisis de datos para impulsar el éxito en la era digital.</p>
+                                    <a href="" class="btn btn-secondary text-white px-5 py-3 rounded-pill">Asignar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         Services End -->
+
+
+        <!-- Project Start
+        <div class="container-fluid project py-5 my-5">
+            <div class="container py-5">
+                <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
+                    <h5 class="text-primary">Nuestros Cursos</h5>
+                    <h1>Aprende con nuestro cursos mas recientes</h1>
+                </div>
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".3s">
+                        <div class="project-item">
+                            <div class="project-img">
+                                <img src="{% static 'img/project-1.jpg'%}" class="img-fluid w-100 rounded" alt="">
+                                <div class="project-content">
+                                    <a href="" class="text-center">
+                                        <h4 class="text-secondary">Python</h4>
+                                        <p class="m-0 text-white">Iniciar Sesion</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".5s">
+                        <div class="project-item">
+                            <div class="project-img">
+                                <img src="{% static 'img/project-2.jpg'%}" class="img-fluid w-100 rounded" alt="">
+                                <div class="project-content">
+                                    <a href="" class="text-center">
+                                        <h4 class="text-secondary">Java</h4>
+                                        <p class="m-0 text-white">Iniciar Sesion</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".7s">
+                        <div class="project-item">
+                            <div class="project-img">
+                                <img src="{%static 'img/project-3.jpg'%}" class="img-fluid w-100 rounded" alt="">
+                                <div class="project-content">
+                                    <a href="" class="text-center">
+                                        <h4 class="text-secondary">JavaScript</h4>
+                                        <p class="m-0 text-white">Iniciar Sesion</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".3s">
+                        <div class="project-item">
+                            <div class="project-img">
+                                <img src="{%static 'img/project-4.jpg'%}" class="img-fluid w-100 rounded" alt="">
+                                <div class="project-content">
+                                    <a href="" class="text-center">
+                                        <h4 class="text-secondary">C++</h4>
+                                        <p class="m-0 text-white">Iniciar Sesion</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".5s">
+                        <div class="project-item">
+                            <div class="project-img">
+                                <img src="{%static 'img/project-5.jpg'%}" class="img-fluid w-100 rounded" alt="">
+                                <div class="project-content">
+                                    <a href="" class="text-center">
+                                        <h4 class="text-secondary">Digital Marketing</h4>
+                                        <p class="m-0 text-white">Iniciar Sesion</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".7s">
+                        <div class="project-item">
+                            <div class="project-img">
+                                <img src="{%static 'img/project-6.jpg'%}" class="img-fluid w-100 rounded" alt="">
+                                <div class="project-content">
+                                    <a href="" class="text-center">
+                                        <h4 class="text-secondary">HTML</h4>
+                                        <p class="m-0 text-white">Inicia Sesion</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         Project End -->
+
+        <!-- Team Start -->
+        <div class="container-fluid pb-5 mb-5 team">
+            <div class="container pb-5">
+                <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
+                    <h5 class="text-primary">Nuestro equipo</h5>
+                    <h1>Conoce a nuestro equipo de expertos</h1>
+                </div>
+                <div class="owl-carousel team-carousel wow fadeIn" data-wow-delay=".5s">
+                    <div class="rounded team-item">
+                        <div class="team-content">
+                            <div class="team-img-icon">
+                                <div class="team-img rounded-circle">
+                                    <img src="{% static 'img/team-1.jpg'%}" class="img-fluid w-100 rounded-circle" alt="">
+                                </div>
+                                <div class="team-name text-center py-3">
+                                    <h4 class="">Cristina Reyes</h4>
+                                    <p class="m-0">Directora Academica</p>
+                                </div>
+                                <div class="team-icon d-flex justify-content-center pb-4">
+                                    <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded team-item">
+                        <div class="team-content">
+                            <div class="team-img-icon">
+                                <div class="team-img rounded-circle">
+                                    <img src="{%static 'img/team-2.jpg'%}" class="img-fluid w-100 rounded-circle" alt="">
+                                </div>
+                                <div class="team-name text-center py-3">
+                                    <h4 class="">Alvaro Ortiz</h4>
+                                    <p class="m-0">Instructor Principal</p>
+                                </div>
+                                <div class="team-icon d-flex justify-content-center pb-4">
+                                    <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded team-item">
+                        <div class="team-content">
+                            <div class="team-img-icon">
+                                <div class="team-img rounded-circle">
+                                    <img src="{%static 'img/team-3.jpg'%}" class="img-fluid w-100 rounded-circle" alt="">
+                                </div>
+                                <div class="team-name text-center py-3">
+                                    <h4 class="">Beatriz Fuentes</h4>
+                                    <p class="m-0">Coordinadora de soporte al estudiante</p>
+                                </div>
+                                <div class="team-icon d-flex justify-content-center pb-4">
+                                    <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded team-item">
+                        <div class="team-content">
+                            <div class="team-img-icon">
+                                <div class="team-img rounded-circle">
+                                    <img src="{%static 'img/team-4.jpg'%}" class="img-fluid w-100 rounded-circle" alt="">
+                                </div>
+                                <div class="team-name text-center py-3">
+                                    <h4 class="">Benjamin Martinez</h4>
+                                    <p class="m-0">Gerente de marketing y comunicaciones</p>
+                                </div>
+                                <div class="team-icon d-flex justify-content-center pb-4">
+                                    <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Team End -->
+
+        <!-- Contact Start -->
+        <div class="container-fluid py-5 mb-5">
+            <div class="container">
+                <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
+                    <h5 class="text-primary">Contactanos</h5>
+                    <h1 class="mb-3">contacto para cualquier consulta</h1>
+                </div>
+                <div class="contact-detail position-relative p-5">
+                    <div class="row g-5 mb-5 justify-content-center">
+                        <div class="col-xl-4 col-lg-6 wow fadeIn" data-wow-delay=".3s">
+                            <div class="d-flex bg-light p-3 rounded">
+                                <div class="flex-shrink-0 btn-square bg-secondary rounded-circle" style="width: 64px; height: 64px;">
+                                    <i class="fas fa-map-marker-alt text-white"></i>
+                                </div>
+                                <div class="ms-3">
+                                    <h4 class="text-primary">Dirección</h4>
+                                    <a href="https://maps.app.goo.gl/YHMb45tgXni1MV9v9" target="_blank" class="h5">Ciudad Universitaria 11.ª Avenida, Zona 12</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-6 wow fadeIn" data-wow-delay=".5s">
+                            <div class="d-flex bg-light p-3 rounded">
+                                <div class="flex-shrink-0 btn-square bg-secondary rounded-circle" style="width: 64px; height: 64px;">
+                                    <i class="fa fa-phone text-white"></i>
+                                </div>
+                                <div class="ms-3">
+                                    <h4 class="text-primary">Llamanos a:</h4>
+                                    <a class="h5" href="tel:+0123456789" target="_blank">Tel: +502 5739-5747</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-6 wow fadeIn" data-wow-delay=".7s">
+                            <div class="d-flex bg-light p-3 rounded">
+                                <div class="flex-shrink-0 btn-square bg-secondary rounded-circle" style="width: 64px; height: 64px;">
+                                    <i class="fa fa-envelope text-white"></i>
+                                </div>
+                                <div class="ms-3">
+                                    <h4 class="text-primary">Correo</h4>
+                                    <a class="h5" href="mailto:info@example.com" target="_blank">usacacademy.genius@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-5">
+                        <div class="col-lg-6 wow fadeIn" data-wow-delay=".3s">
+                            <div class="p-5 h-100 rounded contact-map">
+                                <iframe class="rounded w-100 h-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.4710403339755!2d-73.82241512404069!3d40.685622471397615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c26749046ee14f%3A0xea672968476d962c!2s123rd%20St%2C%20Queens%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1686493221834!5m2!1sen!2sbd" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 wow fadeIn" data-wow-delay=".5s">
+                            <div class="p-5 rounded contact-form">
+                                <div class="mb-4">
+                                    <input type="text" class="form-control border-0 py-3" placeholder="Nombre">
+                                </div>
+                                <div class="mb-4">
+                                    <input type="email" class="form-control border-0 py-3" placeholder="Correo electronico">
+                                </div>
+                                <div class="mb-4">
+                                    <input type="text" class="form-control border-0 py-3" placeholder="Curso">
+                                </div>
+                                <div class="mb-4">
+                                    <textarea class="w-100 form-control border-0 py-3" rows="6" cols="10" placeholder="Mensaje"></textarea>
+                                </div>
+                                <div class="text-start">
+                                    <button class="btn bg-primary text-white py-3 px-5" type="button">Enviar mensaje</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <!-- Contact End -->
+{% endblock %}

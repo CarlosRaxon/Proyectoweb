@@ -1,0 +1,130 @@
+{% extends "proyectowebapp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Page Header Start -->
+<div class="container-fluid page-header py-5">
+    <div class="container text-center py-5">
+        <h1 class="display-2 text-white mb-4 animated slideInDown">Sobre Nosotros</h1>
+        <nav aria-label="breadcrumb animated slideInDown">
+        </nav>
+    </div>
+</div>
+<!-- Page Header End -->
+        
+        <!-- About Start -->
+        <div class="container-fluid py-5 my-5">
+            <div class="container pt-5">
+                <div class="row g-5">
+                    <div class="col-lg-5 col-md-6 col-sm-12 wow fadeIn" data-wow-delay=".3s">
+                        <div class="h-100 position-relative">
+                            <img src="{% static 'img/about-1.jpg' %}" class="img-fluid w-75 rounded" alt="" style="margin-bottom: 25%;">
+                            <div class="position-absolute w-75" style="top: 25%; left: 25%;">
+                                <img src="{% static 'img/about-2.jpg'%}" class="img-fluid w-100 rounded" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-6 col-sm-12 wow fadeIn" data-wow-delay=".5s">
+                        <h5 class="text-primary">Sobre nosotros</h5>
+                        <h1 class="mb-4">Tu Puerta a un Futuro Tecnológico Brillante</h1>
+                        <p>En USAC ACADEMY, estamos dedicados a transformar tus ambiciones tecnológicas en una realidad tangible. Somos mucho más que una academia de cursos; somos tus socios en el viaje hacia el conocimiento y el éxito en el mundo de la tecnología y la programación.</p>
+                        <p class="mb-4">Consideramos tu educación como una inversión en tu futuro. Estamos comprometidos a brindarte una experiencia de aprendizaje enriquecedora que te equipará con las habilidades y el conocimiento necesarios para destacar en el competitivo mundo de la tecnología y la programación. Únete a nosotros en este emocionante viaje hacia un futuro tecnológico brillante. Juntos, alcanzaremos nuevas alturas en el mundo de la innovación y la creatividad.</p>
+                        <a href="" class="btn btn-secondary rounded-pill px-5 py-3 text-white">Mas Detalles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+                <!-- Team Start -->
+                <div class="container-fluid pb-5 mb-5 team">
+                    <div class="container pb-5">
+                        <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
+                            <h5 class="text-primary">Nuestro equipo</h5>
+                            <h1>Conoce a nuestro equipo de expertos</h1>
+                        </div>
+                        <div class="owl-carousel team-carousel wow fadeIn" data-wow-delay=".5s">
+                            <div class="rounded team-item">
+                                <div class="team-content">
+                                    <div class="team-img-icon">
+                                        <div class="team-img rounded-circle">
+                                            <img src="{% static 'img/team-1.jpg'%}" class="img-fluid w-100 rounded-circle" alt="">
+                                        </div>
+                                        <div class="team-name text-center py-3">
+                                            <h4 class="">Cristina Reyes</h4>
+                                            <p class="m-0">Directora Academica</p>
+                                        </div>
+                                        <div class="team-icon d-flex justify-content-center pb-4">
+                                            <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                            <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-twitter"></i></a>
+                                            <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-instagram"></i></a>
+                                            <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rounded team-item">
+                                <div class="team-content">
+                                    <div class="team-img-icon">
+                                        <div class="team-img rounded-circle">
+                                            <img src="{%static 'img/team-2.jpg'%}" class="img-fluid w-100 rounded-circle" alt="">
+                                        </div>
+                                        <div class="team-name text-center py-3">
+                                            <h4 class="">Alvaro Ortiz</h4>
+                                            <p class="m-0">Instructor Principal</p>
+                                        </div>
+                                        <div class="team-icon d-flex justify-content-center pb-4">
+                                            <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                            <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-twitter"></i></a>
+                                            <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-instagram"></i></a>
+                                            <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rounded team-item">
+                                <div class="team-content">
+                                    <div class="team-img-icon">
+                                        <div class="team-img rounded-circle">
+                                            <img src="{%static 'img/team-3.jpg'%}" class="img-fluid w-100 rounded-circle" alt="">
+                                        </div>
+                                        <div class="team-name text-center py-3">
+                                            <h4 class="">Beatriz Fuentes</h4>
+                                            <p class="m-0">Coordinadora de soporte al estudiante</p>
+                                        </div>
+                                        <div class="team-icon d-flex justify-content-center pb-4">
+                                            <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                            <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-twitter"></i></a>
+                                            <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-instagram"></i></a>
+                                            <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rounded team-item">
+                                <div class="team-content">
+                                    <div class="team-img-icon">
+                                        <div class="team-img rounded-circle">
+                                            <img src="{%static 'img/team-4.jpg'%}" class="img-fluid w-100 rounded-circle" alt="">
+                                        </div>
+                                        <div class="team-name text-center py-3">
+                                            <h4 class="">Benjamin Martinez</h4>
+                                            <p class="m-0">Gerente de marketing y comunicaciones</p>
+                                        </div>
+                                        <div class="team-icon d-flex justify-content-center pb-4">
+                                            <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                            <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-twitter"></i></a>
+                                            <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-instagram"></i></a>
+                                            <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team End -->
+
+{% endblock %}
