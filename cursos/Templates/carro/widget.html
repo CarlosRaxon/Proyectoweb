@@ -1,0 +1,61 @@
+<table class="table table-bordered" style="color:black">
+
+    <thead>
+        <tr>
+            <th colspan="3" class="text-center">
+                Cursos Agredados
+            </th>
+        </tr>    
+        <tr>
+            <th>Curso</th>  <!--en caso regresar a suma quitar colspan-->
+            <th>Cantidad</th>
+            <th>Quitar</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        {% if request.session.carro.items %}
+            {% for key, value in request.session.carro.items %}
+                <tr class="text-center">
+                    <td> {{value.nombre}} </td>
+                    <td> {{value.cantidad}} </td>
+                    <td>
+                        <!--<a href="{% url 'carro:agregar' value.producto_id %}" class="btn btn-sm btn-success">+</a>-->
+                        <a href="{% url 'carro:restar' value.producto_id %}" class="btn btn-sm btn-success">-</a><br/>
+
+                        Q {{value.precio}} 
+
+                    </td>
+                </tr>
+            {% endfor %}
+        {% else %}
+            <tr>
+                <td colspan="3">
+                    <div class="alert alert-danger text-center" style="color: black;">
+                        Sin Cursos Agregados
+                    </div>
+                </td>
+            </tr>
+        {% endif %}
+
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td colspan="3">
+                Total: Q {{ importe_total_carro }}
+            </td>
+        </tr>
+
+        {% if request.session.carro.items %}
+        <tr>
+            <td colspan="3" style="text-align: center;" >
+                <a href="#" class="btn btn-success">Asignar</a>
+            </td>
+        </tr>
+        {% endif %}
+
+    </tfoot>
+
+</table>

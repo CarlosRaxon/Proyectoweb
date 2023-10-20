@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 import os
 from .juzzmin import JAZZMIN_SETTINGS
+from django.contrib.messages import constants as mensajes_de_error
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -44,6 +45,12 @@ INSTALLED_APPS = [
     #My apps
     'proyectowebapp',
     'cursos',
+    'contacto',
+    'carro',
+    'autenticacion',
+    'crispy_forms',
+    'crispy_bootstrap5',
+    'asignacion',
 ]
 
 MIDDLEWARE = [
@@ -69,6 +76,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'carro.context_processor.importe_total_carro',
             ],
         },
     },
@@ -137,3 +145,14 @@ MEDIA_ROOT=os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 JAZZMIN_SETTINGS = JAZZMIN_SETTINGS
+
+CRIPSY_ALLOWED_TEMPLATE_PACKS="bootstrap5"
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
+
+MESSAGE_TAGS={
+    mensajes_de_error.DEBUG: 'debug',
+    mensajes_de_error.INFO: 'info',
+    mensajes_de_error.SUCCESS: 'success',
+    mensajes_de_error.WARNING: 'warning',
+    mensajes_de_error.ERROR: 'danger',
+}

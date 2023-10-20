@@ -3,32 +3,48 @@
 {% load static %}
 
 {% block content %}
+    <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
+        <h4 class="text-primary">Nuestros Cursos</h4>
+        <h1>Aprende con nuestro cursos mas recientes</h1>
+    </div>
+<!--Widget del carrito-->
+    <div style="float:right;">
+        {% if request.user.is_authenticated %}
+            {% include "carro/widget.html" %}
+        {% else %}
 
-    {% for Curso in cursos %}
+            <div class="alert alert-danger text-center">
+                Iniciar Sesión Para Asignar
+            </div>
+
+        {% endif %}
+    </div>
+
     <div class="container-fluid project py-5 my-5">
         <div class="container py-5">
-            <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
-                <h4 class="text-primary">Nuestros Cursos</h4>
-                <h1>Aprende con nuestro cursos mas recientes</h1>
-            </div>
             <div class="row g-5">
+
+    {% for producto in productos %}
                 <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".3s">
-                    <div class="project-item">
+                    <div class="project-item" style="width: 70%; margin: 0 auto;">
                         <div class="project-img">
-                            <img src="{{ MEDIA_URL }}{{ Curso.imagen.url }}" class="img-fluid w-100 rounded" alt="">
+
+                            <img src="{{ MEDIA_URL }}{{ producto.imagen.url }}" class="img-fluid w-100 rounded" alt="">
                             <div class="project-content">
-                                <a href="" class="text-center">
-                                    <h4 class="text-secondary">{{ Curso.titulo }} </h4>
-                                    <p class="m-0 text-white">{{ Curso.contenido }}</p>
-                                    <p class="m-0 text-white">Iniciar Sesion</p>
+                                <a href="#" class="text-center">
+                                    <h4 class="text-secondary">{{ producto.nombre }} </h4>
+                                    <p class="m-0 text-white">{{ producto.precio }}</p>
+                                    <a href="{% url 'carro:agregar' producto.id %}" class="btn btn-success">Agregar Curso</a>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
+    {% endfor %} 
+ 
             </div>
         </div>
     </div>
-        
-    {% endfor %}
+
+
 {% endblock %}
